@@ -1,0 +1,727 @@
+:root {
+    --eco-green: #4A7B58;
+    --earth-brown: #8B7355;
+    --natural-beige: #F5F2EA;
+    --ocean-blue: #5F8EA0;
+    --recycled-gray: #737373;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333;
+    background-color: var(--natural-beige);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.7rem 0;
+}
+
+/* Adjust padding for fixed navbar */
+body {
+    padding-top: 76px; /* Height of navbar */
+}
+
+.navbar-brand {
+    color: var(--eco-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--eco-green) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-cta .btn-primary {
+    background-color: var(--eco-green);
+    border-color: var(--eco-green);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+}
+
+.hero-cta .btn-outline-primary {
+    color: var(--eco-green);
+    border-color: var(--eco-green);
+    background-color: transparent;
+}
+
+.hero-cta .btn-outline-primary:hover {
+    background-color: var(--eco-green);
+    border-color: var(--eco-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 123, 88, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Eco-friendly button styles */
+.btn-outline-eco {
+    color: var(--eco-green);
+    border-color: var(--eco-green);
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-outline-eco:hover {
+    background-color: var(--eco-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 123, 88, 0.2);
+}
+
+.btn-outline-eco .fa-shopping-cart {
+    font-size: 0.9em;
+}
+
+/* Eco Stats */
+.stat-card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card i {
+    color: var(--eco-green);
+    margin-bottom: 1rem;
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    padding-top: 125%;
+    overflow: hidden;
+}
+
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eco-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--eco-green);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: var(--eco-green);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-info p {
+    color: var(--recycled-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* Hover effect for product cards */
+.product-card:hover .btn-outline-eco {
+    background-color: var(--eco-green);
+    color: white;
+}
+
+/* Impact Section Styles */
+#impacto {
+    background-color: var(--natural-beige);
+    padding: 6rem 0;
+}
+
+.impact-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.impact-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.impact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.impact-card:hover .impact-image img {
+    transform: scale(1.1);
+}
+
+.impact-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.impact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--eco-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.impact-content h3 {
+    color: var(--eco-green);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.impact-content p {
+    color: var(--recycled-gray);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.impact-timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    opacity: 1; /* Cambiado de 0 a 1 para asegurar visibilidad */
+    transform: translateY(0); /* Eliminada la transformación inicial */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    position: relative; /* Asegura el posicionamiento correcto */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+}
+
+.timeline-item.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.timeline-content h3 {
+    color: var(--eco-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-content p {
+    color: var(--recycled-gray);
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.timeline-image {
+    flex: 0 0 45%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    aspect-ratio: 4/3;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-image {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.timeline-image:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    transform: perspective(1000px) rotateY(5deg);
+}
+
+.timeline-item:nth-child(even) .timeline-image:hover {
+    transform: perspective(1000px) rotateY(-5deg);
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.timeline-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(74,123,88,0.1) 100%);
+}
+
+.timeline-image:hover img {
+    transform: scale(1.05);
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--eco-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -1rem;
+    top: -0.5rem;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column !important;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        padding: 0 1rem;
+    }
+
+    .timeline-image {
+        flex: 0 0 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    .timeline-content {
+        padding: 2rem;
+    }
+    
+    .timeline-content h3 {
+        padding-left: 3rem;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        left: 0;
+    }
+}
+
+/* Newsletter Section */
+#newsletter {
+    background-color: var(--eco-green);
+    color: white;
+}
+
+#newsletter .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#newsletter .form-control {
+    border-radius: 50px 0 0 50px;
+    padding: 0.8rem 1.5rem;
+}
+
+#newsletter .btn {
+    border-radius: 0 50px 50px 0;
+    padding: 0.8rem 2rem;
+    background-color: white;
+    color: var(--eco-green);
+    border: none;
+}
+
+/* Footer */
+footer a {
+    color: var(--eco-green);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--earth-brown);
+}
+
+/* Custom styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero section styles */
+header {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    padding: 100px 0;
+}
+
+header .display-4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* About section styles */
+#about {
+    background-color: #ffffff;
+}
+
+/* Contact form styles */
+#contact {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Custom animations */
+.navbar-brand {
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    #hero {
+        padding: 4rem 0;
+    }
+    
+    .hero-cta .btn {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Whatsapp link styles */
+.nav-link .fa-whatsapp {
+    color: #25D366;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover .fa-whatsapp {
+    transform: scale(1.2);
+}
+
+/* Referral Section Styles */
+#referral {
+    background: linear-gradient(135deg, var(--natural-beige) 0%, white 100%);
+    position: relative;
+}
+
+.eco-icon {
+    color: var(--eco-green);
+    margin-bottom: 2rem;
+}
+
+.referral-content {
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    color: var(--eco-green);
+    font-size: 2rem;
+}
+
+.benefit-item h4 {
+    color: var(--eco-green);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: var(--recycled-gray);
+    margin-bottom: 0;
+}
+
+.form-control-lg {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control-lg:focus {
+    border-color: var(--eco-green);
+    box-shadow: 0 0 0 0.2rem rgba(74, 123, 88, 0.25);
+}
+
+.btn-eco {
+    background-color: var(--eco-green);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-eco:hover {
+    background-color: darken(var(--eco-green), 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 123, 88, 0.3);
+    color: white;
+}
+
+/* New Footer Styles */
+.bg-eco {
+    background-color: var(--eco-green);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: white;
+    color: var(--eco-green);
+    transform: translateY(-3px);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    /* General adjustments */
+    body {
+        padding-top: 60px; /* Reduced padding for mobile */
+    }
+    
+    /* Navbar adjustments */
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    /* Hero section adjustments */
+    #hero {
+        padding: 3rem 0;
+        background-attachment: scroll; /* Better mobile performance */
+    }
+    
+    #hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-cta .btn {
+        margin: 0.5rem 0;
+        width: 100%;
+        display: block;
+    }
+    
+    /* Product card adjustments */
+    .product-card {
+        margin-bottom: 2rem;
+    }
+    
+    .product-image {
+        padding-top: 100%; /* Square aspect ratio on mobile */
+    }
+    
+    /* Impact section adjustments */
+    .impact-card {
+        margin-bottom: 2rem;
+    }
+    
+    .impact-image {
+        height: 200px;
+    }
+    
+    /* Referral section adjustments */
+    .benefit-item {
+        margin-bottom: 2rem;
+    }
+    
+    /* Form adjustments */
+    .form-control-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Footer adjustments */
+    .social-links a {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Hero section */
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Grid adjustments */
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .product-card:hover,
+    .impact-card:hover,
+    .stat-card:hover {
+        transform: none;
+    }
+    
+    .timeline-image:hover {
+        transform: none !important;
+    }
+    
+    .btn-outline-eco:hover {
+        transform: none;
+    }
+}
+
+/* High-DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
