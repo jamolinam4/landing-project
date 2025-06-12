@@ -1,14 +1,17 @@
 {
-  "name": "landing-page-project",
+  "name": "landing-project",
   "version": "1.0.0",
   "description": "Landing page with MySQL integration",
   "author": "Julieth Molina",
+  "homepage": "https://jamolinam4.github.io/landing-project",
   "main": "src/server/server.js",
   "scripts": {
     "start": "node src/server/server.js",
     "dev": "nodemon src/server/server.js",
     "test": "echo \"No tests specified\" && exit 0",
-    "build": "mkdir -p dist && cp -r src/public/* dist/"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d src/public",
+    "build": "if not exist dist mkdir dist && xcopy /E /I src\\public dist"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,7 +21,7 @@
     "mysql2": "^3.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodemon": "^2.0.22"
-  },
-  "homepage": "https://juliethmolina.github.io/landing-page-project"
+  }
 }
